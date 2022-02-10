@@ -19,7 +19,8 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge =32;
+console.log(votingAge>=18)
 
 
 /*
@@ -33,7 +34,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let firstThing = 34;
+let secondThing = 45;
+if (firstThing < secondThing){
+  firstThing=35
+}
+console.log(firstThing)
 
 
 
@@ -131,12 +137,12 @@ function hungryDog(weight,age){
   if (age <1){
     if (2/12<=age && age<4/12){
       return weight*0.1}
-    else if (4/12<=age && age< (Math.floor(7/12))){
+    else if (4/12<=age && age< 0.583){
       return (weight*5)/100
-    }else if(Math.floor(7/12<=age) && age<12/12){
+    }else if(0.583<=age && age<12/12){
       return (weight*4)/100
     }
-  };
+  }
   if(age>=1){
     if(weight<=5){
       return (weight * 5)/100
@@ -228,8 +234,8 @@ Using the miles function below do the following:
 2. Convert the number of kiolmeters received to miles
 3. Return the number of miles
 */
-
-function miles(/*add your code here*/){
+function miles(disKm){
+  return disKm * 0.621371
   /*add your code here*/
 }
 
@@ -243,8 +249,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm/30.48
 }
 
 
@@ -262,9 +268,15 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
+var number =5
+function annoyingSong(number){
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+      return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`
+}
+let count = number
+while(count<=1){
+  console.log(annoyingSong(count))
+  count = count-1
 }
 
 
