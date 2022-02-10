@@ -60,9 +60,8 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
-
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b
 }
 
 
@@ -77,10 +76,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
-}
 
+function dogYears(age){
+  return age *7
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -128,11 +127,29 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         Notice the expected and received, expected is what the test is looking for, and received is what was actually returned from this function. You can also see it's passing in two values, the number 4 and the number 1. 
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
-
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight,age){
+  if (age <1){
+    if (2/12<=age && age<4/12){
+      return weight*0.1}
+    else if (4/12<=age && age< (Math.floor(7/12))){
+      return (weight*5)/100
+    }else if(Math.floor(7/12<=age) && age<12/12){
+      return (weight*4)/100
+    }
+  };
+  if(age>=1){
+    if(weight<=5){
+      return (weight * 5)/100
+    }else if(6<=weight && weight<=10){
+      return (weight * 0.04)
+    }else if(11 <=weight && weight<=15){
+      return (weight * 0.03)
+    }else if(weight>15){
+      return (weight * 0.02)
+    }
+  }
+  
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -227,7 +244,18 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
+function grade(grade){
+  if(grade>=90 && grade<=100 ){
+    return 'you got an A'
+  }else if(grade>=80 && grade<=89){
+    return 'you got a B'
+  }else if (grade>=70 && grade<=79){
+    return 'you got a C'
+  }else if (grade>=60 && grade <=69){
+    return 'you got a D'
+  }else{
+    return 'you got an F'
+  }
 /*Your Code here */
 }
 
